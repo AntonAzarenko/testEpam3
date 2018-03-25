@@ -2,13 +2,10 @@
 <site xmlns="www.azarenko.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="www.azarenko.com ">
     <page>
-    <title>advertisingpage</title>
-    <type>
-        <advertisingpage>
-            <email>true</email>
-        </advertisingpage>
-    </type>
-</page>
+        <title>123</title>
+        <type>advitisindpage</type>
+        <email>true</email>
+    </page>
     <page>
         <title>news</title>
         <type>

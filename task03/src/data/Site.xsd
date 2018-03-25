@@ -3,7 +3,6 @@
   <xs:element name="site" type="azar:siteType" xmlns:azar="www.azarenko.com"/>
   <xs:complexType name="typeType">
     <xs:sequence>
-      <xs:element type="azar:advertisingpageType" name="advertisingpage" minOccurs="0" xmlns:azar="www.azarenko.com"/>
       <xs:element type="azar:newpageType" name="newpage" minOccurs="0" xmlns:azar="www.azarenko.com"/>
     </xs:sequence>
   </xs:complexType>
@@ -12,20 +11,22 @@
       <xs:element name="title">
         <xs:simpleType>
           <xs:restriction base="xs:string">
-            <xs:enumeration value="advertisingpage"/>
+            <xs:enumeration value="123"/>
             <xs:enumeration value="news"/>
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element type="azar:typeType" name="type" xmlns:azar="www.azarenko.com"/>
+      <xs:element name="type">
+        <xs:complexType mixed="true">
+          <xs:sequence>
+            <xs:element type="azar:newpageType" name="newpage" minOccurs="0" xmlns:azar="www.azarenko.com"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element type="xs:string" name="email" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="newpageType">
-    <xs:sequence>
-      <xs:element type="xs:string" name="email"/>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="advertisingpageType">
     <xs:sequence>
       <xs:element type="xs:string" name="email"/>
     </xs:sequence>
