@@ -2,33 +2,19 @@
 <site xmlns="www.azarenko.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="www.azarenko.com ">
     <page>
-        <title>Pages</title>
+    <title>advertisingpage</title>
+    <type>
+        <advertisingpage>
+            <email>true</email>
+        </advertisingpage>
+    </type>
+</page>
+    <page>
+        <title>news</title>
         <type>
-            <advertisingpage>
-                <chars>
-                    <email>Ant-azarenko@mail.ru</email>
-                </chars>
-            </advertisingpage>
-            <newspage>
-                <chars>
-                    <email>Ant-azarenko@mail.ru</email>
-                    <news>???</news>
-                </chars>
-            </newspage>
-            <portalpage>
-                <chars>
-                    <email>mail@tut.by</email>
-                    <vote>
-                        <autorize>true</autorize>
-                    </vote>
-                </chars>
-            </portalpage>
-            <mirrorpage>
-                <chars>
-                    <archives>1.zip</archives>
-                    <paid></paid>
-                </chars>
-            </mirrorpage>
+            <newpage>
+                <email>true</email>
+            </newpage>
         </type>
     </page>
 </site>

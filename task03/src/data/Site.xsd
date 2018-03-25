@@ -1,64 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="www.azarenko.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="site" type="azar:siteType" xmlns:azar="www.azarenko.com"/>
-  <xs:complexType name="newspageType">
-    <xs:sequence>
-      <xs:element type="azar:charsType" name="chars" xmlns:azar="www.azarenko.com"/>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="portalpageType">
-    <xs:sequence>
-      <xs:element type="azar:charsType" name="chars" xmlns:azar="www.azarenko.com"/>
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="typeType">
     <xs:sequence>
-      <xs:element type="azar:advertisingpageType" name="advertisingpage" xmlns:azar="www.azarenko.com"/>
-      <xs:element type="azar:newspageType" name="newspage" xmlns:azar="www.azarenko.com"/>
-      <xs:element type="azar:portalpageType" name="portalpage" xmlns:azar="www.azarenko.com"/>
-      <xs:element type="azar:mirrorpageType" name="mirrorpage" xmlns:azar="www.azarenko.com"/>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="charsType">
-    <xs:sequence>
-      <xs:element name="email" minOccurs="0">
-        <xs:simpleType>
-          <xs:restriction base="xs:string">
-            <xs:enumeration value="Ant-azarenko@mail.ru"/>
-            <xs:enumeration value="mail@tut.by"/>
-          </xs:restriction>
-        </xs:simpleType>
-      </xs:element>
-      <xs:element type="xs:string" name="news" minOccurs="0"/>
-      <xs:element type="azar:voteType" name="vote" minOccurs="0" xmlns:azar="www.azarenko.com"/>
-      <xs:element type="xs:string" name="archives" minOccurs="0"/>
-      <xs:element type="xs:string" name="paid" minOccurs="0"/>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="voteType">
-    <xs:sequence>
-      <xs:element type="xs:string" name="autorize"/>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="mirrorpageType">
-    <xs:sequence>
-      <xs:element type="azar:charsType" name="chars" xmlns:azar="www.azarenko.com"/>
+      <xs:element type="azar:advertisingpageType" name="advertisingpage" minOccurs="0" xmlns:azar="www.azarenko.com"/>
+      <xs:element type="azar:newpageType" name="newpage" minOccurs="0" xmlns:azar="www.azarenko.com"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="pageType">
     <xs:sequence>
-      <xs:element type="xs:string" name="title"/>
+      <xs:element name="title">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="advertisingpage"/>
+            <xs:enumeration value="news"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
       <xs:element type="azar:typeType" name="type" xmlns:azar="www.azarenko.com"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="newpageType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="email"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="advertisingpageType">
     <xs:sequence>
-      <xs:element type="azar:charsType" name="chars" xmlns:azar="www.azarenko.com"/>
+      <xs:element type="xs:string" name="email"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="siteType">
     <xs:sequence>
-      <xs:element type="azar:pageType" name="page" xmlns:azar="www.azarenko.com"/>
+      <xs:element type="azar:pageType" name="page" maxOccurs="unbounded" minOccurs="0" xmlns:azar="www.azarenko.com"/>
     </xs:sequence>
   </xs:complexType>
 </xs:schema>
