@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<site xmlns="d:\JAVA\EPAM\EpamTest\task03\src\data">
+    <page>
+        <title>Pages</title>
+        <type>
+            <advertisingpage>
+                <chars>
+                    <email>Ant-azarenko@mail.ru</email>
+                </chars>
+            </advertisingpage>
+            <newspage>
+                <chars>
+                    <email>Ant-azarenko@mail.ru</email>
+                    <news>???</news>
+                </chars>
+            </newspage>
+            <portalpage>
+                <chars>
+                    <email>mail@tut.by</email>
+                    <vote>
+                        <autorize>true</autorize>
+                    </vote>
+                </chars>
+            </portalpage>
+            <mirrorpage>
+                <chars>
+                    <archives>1.zip</archives>
+                    <paid></paid>
+                </chars>
+            </mirrorpage>
+        </type>
+    </page>
+</site>

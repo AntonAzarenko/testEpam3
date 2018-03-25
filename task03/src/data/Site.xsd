@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="d:\JAVA\EPAM\EpamTest\task03\src\data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="site" type="d:siteType" xmlns:d="d:\JAVA\EPAM\EpamTest\task03\src\data"/>
+  <xs:complexType name="voteType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="autorize"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mirrorpageType">
+    <xs:sequence>
+      <xs:element type="d:charsType" name="chars" xmlns:d="d:\JAVA\EPAM\EpamTest\task03\src\data"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pageType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="title"/>
+      <xs:element type="d:typeType" name="type" xmlns:d="d:\JAVA\EPAM\EpamTest\task03\src\data"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="newspageType">
+    <xs:sequence>
+      <xs:element type="d:charsType" name="chars" xmlns:d="d:\JAVA\EPAM\EpamTest\task03\src\data"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="charsType">
+    <xs:sequence>
+      <xs:element name="email" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value=""/>
+            <xs:enumeration value="Ant-azarenko@mail.ru"/>
+            <xs:enumeration value="mail@tut.by"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:string" name="news" minOccurs="0"/>
+      <xs:element type="d:voteType" name="vote" minOccurs="0" xmlns:d="d:\JAVA\EPAM\EpamTest\task03\src\data"/>
+      <xs:element type="xs:string" name="archives" minOccurs="0"/>
+      <xs:element type="xs:string" name="paid" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="portalpageType">
+    <xs:sequence>
+      <xs:element type="d:charsType" name="chars" xmlns:d="d:\JAVA\EPAM\EpamTest\task03\src\data"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="typeType">
+    <xs:sequence>
+      <xs:element type="d:advertisingpageType" name="advertisingpage" xmlns:d="d:\JAVA\EPAM\EpamTest\task03\src\data"/>
+      <xs:element type="d:newspageType" name="newspage" xmlns:d="d:\JAVA\EPAM\EpamTest\task03\src\data"/>
+      <xs:element type="d:portalpageType" name="portalpage" xmlns:d="d:\JAVA\EPAM\EpamTest\task03\src\data"/>
+      <xs:element type="d:mirrorpageType" name="mirrorpage" xmlns:d="d:\JAVA\EPAM\EpamTest\task03\src\data"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="advertisingpageType">
+    <xs:sequence>
+      <xs:element type="d:charsType" name="chars" xmlns:d="d:\JAVA\EPAM\EpamTest\task03\src\data"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="siteType">
+    <xs:sequence>
+      <xs:element type="d:pageType" name="page" xmlns:d="d:\JAVA\EPAM\EpamTest\task03\src\data"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
