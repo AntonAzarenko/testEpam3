@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="www.azarenko.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="site" type="azar:siteType" xmlns:azar="www.azarenko.com"/>
-  <xs:complexType name="typeType">
-    <xs:sequence>
-      <xs:element type="azar:newpageType" name="newpage" minOccurs="0" xmlns:azar="www.azarenko.com"/>
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="pageType">
     <xs:sequence>
       <xs:element name="title">
@@ -17,18 +12,21 @@
         </xs:simpleType>
       </xs:element>
       <xs:element name="type">
-        <xs:complexType mixed="true">
-          <xs:sequence>
-            <xs:element type="azar:newpageType" name="newpage" minOccurs="0" xmlns:azar="www.azarenko.com"/>
-          </xs:sequence>
-        </xs:complexType>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="advitisindpage"/>
+            <xs:enumeration value="newspage"/>
+          </xs:restriction>
+        </xs:simpleType>
       </xs:element>
-      <xs:element type="xs:string" name="email" minOccurs="0"/>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="newpageType">
-    <xs:sequence>
-      <xs:element type="xs:string" name="email"/>
+      <xs:element name="email">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="true"/>
+            <xs:enumeration value="false"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="siteType">

@@ -8,10 +8,7 @@
     </page>
     <page>
         <title>news</title>
-        <type>
-            <newpage>
-                <email>true</email>
-            </newpage>
-        </type>
+        <type>newspage</type>
+        <email>false</email>
     </page>
 </site>
