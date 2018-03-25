@@ -11,6 +11,8 @@ import javax.xml.validation.SchemaFactory;
 import javax.xml.validation.Validator;
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class ValidatorSax {
     public static void main(String[] args) {
@@ -29,7 +31,9 @@ public class ValidatorSax {
             SAXParser parser = spf.newSAXParser();
             //установка обработчика ошибок и запуск
             parser.parse(fileName, new SiteErrorHandler(longName));
-            System.out.println(fileName + " valid");
+            //из пути получаем имя файла
+            Path path = Paths.get(fileName).getFileName();
+            System.out.println(path + " - valid");
         } catch (SAXException e) {
             e.printStackTrace();
         } catch (ParserConfigurationException e) {
