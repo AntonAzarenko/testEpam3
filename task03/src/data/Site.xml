@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<site xmlns="d:\JAVA\EPAM\EpamTest\task03\src\data">
+<site xmlns="www.azarenko.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="www.azarenko.com ">
     <page>
         <title>Pages</title>
         <type>
