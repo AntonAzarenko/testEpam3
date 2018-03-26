@@ -11,4 +11,9 @@
         <type>newspage</type>
         <email>false</email>
     </page>
+    <page>
+        <title></title>
+        <type></type>
+        <email></email>
+    </page>
 </site>
