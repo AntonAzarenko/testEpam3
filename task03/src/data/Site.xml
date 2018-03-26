@@ -1,19 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <site xmlns="www.azarenko.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="www.azarenko.com ">
-    <page>
-        <title>123</title>
-        <type>advitisindpage</type>
-        <email>true</email>
+    <page id="1">
+        <title>googleadvertisinds</title>
+        <type>advetisindpage</type>
+        <autorize>false</autorize>
     </page>
-    <page>
+    <page id="2">
         <title>news</title>
         <type>newspage</type>
-        <email>false</email>
+        <autorize>false</autorize>
+        <news>true</news>
+        <email>news@mail.by</email>
     </page>
-    <page>
-        <title></title>
-        <type></type>
-        <email></email>
+    <page id="3">
+        <title>tut.by</title>
+        <type>portalpage</type>
+        <autorize>true</autorize>
+        <vote>true</vote>
+        <voteautorize>false</voteautorize>
+        <email>tut@tut.by</email>
+    </page>
+    <page id="4">
+        <title>mirrors</title>
+        <type>mirrorpage</type>
+        <autorize>false</autorize>
+        <email>mirirs@gmail.com</email>
+        <archives>true</archives>
+        <paid>false</paid>
     </page>
 </site>

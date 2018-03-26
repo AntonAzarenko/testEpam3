@@ -6,28 +6,43 @@
       <xs:element name="title">
         <xs:simpleType>
           <xs:restriction base="xs:string">
-            <xs:enumeration value="123"/>
-            <xs:enumeration value="news"/>
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
       <xs:element name="type">
         <xs:simpleType>
           <xs:restriction base="xs:string">
-            <xs:enumeration value="advitisindpage"/>
+            <xs:enumeration value="advetisindpage"/>
             <xs:enumeration value="newspage"/>
+            <xs:enumeration value="portalpage"/>
+            <xs:enumeration value="mirrorpage"/>
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element name="email">
+      <xs:element name="autorize">
         <xs:simpleType>
           <xs:restriction base="xs:string">
-            <xs:enumeration value="true"/>
             <xs:enumeration value="false"/>
+            <xs:enumeration value="true"/>
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
+      <xs:element type="xs:boolean" name="news" minOccurs="0"/>
+      <xs:element type="xs:boolean" name="vote" minOccurs="0"/>
+      <xs:element type="xs:boolean" name="voteautorize" minOccurs="0"/>
+      <xs:element name="email" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="news@mail.by"/>
+            <xs:enumeration value="tut@tut.by"/>
+            <xs:enumeration value="mirirs@gmail.com"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:boolean" name="archives" minOccurs="0"/>
+      <xs:element type="xs:boolean" name="paid" minOccurs="0"/>
     </xs:sequence>
+    <xs:attribute type="xs:integer" name="id" use="optional"/>
   </xs:complexType>
   <xs:complexType name="siteType">
     <xs:sequence>
