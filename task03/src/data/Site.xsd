@@ -6,19 +6,24 @@
       <xs:element name="title">
         <xs:simpleType>
           <xs:restriction base="xs:string">
+            <xs:enumeration value="123"/>
+            <xs:enumeration value="news"/>
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
       <xs:element name="type">
         <xs:simpleType>
           <xs:restriction base="xs:string">
-
+            <xs:enumeration value="advitisindpage"/>
+            <xs:enumeration value="newspage"/>
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
       <xs:element name="email">
         <xs:simpleType>
-          <xs:restriction base="xs:boolean">
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="true"/>
+            <xs:enumeration value="false"/>
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
