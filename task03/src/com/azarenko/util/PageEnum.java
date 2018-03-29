@@ -3,6 +3,9 @@ package com.azarenko.util;
 public enum PageEnum {
     SITE("site"),
     PAGE("page"),
+    SECRETBALLOT("secretballot"),
+    LOGIN("login"),
+    PASSWORD("password"),
     TITLE("tytle"),
     AUTORIZE("authorize"),
     TYPE("type"),

@@ -5,3 +5,8 @@ ERROR - 3 : 46 - cvc-elt.1: Cannot find the declaration of element 'site'.
 ERROR - 3 : 46 - cvc-elt.1: Cannot find the declaration of element 'site'.
 ERROR - 3 : 46 - cvc-elt.1: Cannot find the declaration of element 'site'.
 ERROR - 3 : 46 - cvc-elt.1: Cannot find the declaration of element 'site'.
+ERROR - 3 : 46 - cvc-elt.1: Cannot find the declaration of element 'site'.
+ERROR - 3 : 46 - cvc-elt.1: Cannot find the declaration of element 'site'.
+FATAL - 12 : 9 - The end-tag for element type "type" must end with a '>' delimiter.
+ERROR - 3 : 46 - cvc-elt.1: Cannot find the declaration of element 'site'.
+ERROR - 3 : 46 - cvc-elt.1: Cannot find the declaration of element 'site'.

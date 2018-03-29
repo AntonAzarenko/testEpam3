@@ -13,6 +13,7 @@ public class PageHandler extends DefaultHandler {
     private Page current = null;
     private PageEnum currentEnam;
     private EnumSet<PageEnum> withText;
+    private Authorize authorize;
 
     public PageHandler() {
         pageList = new ArrayList<>();
@@ -29,6 +30,9 @@ public class PageHandler extends DefaultHandler {
         }
         if ("page".equals(localname)) {
             current = getPage(attrs);
+        }
+        if ("autorize".equals(localname)) {
+            authorize = new Authorize();
         } else {
             PageEnum temp = PageEnum.valueOf(localname.toUpperCase());
             if (withText.contains(temp)) {
@@ -45,10 +49,16 @@ public class PageHandler extends DefaultHandler {
                 case TYPE:
                     current.setType(s);
                     break;
-                case AUTORIZE:
-                    current.setType(s);
+                case LOGIN:
+                    authorize.setLogin(s);
+                    break;
+                case PASSWORD:
+                    authorize.setPassword(s);
                     break;
                 case EMAIL:
+                    current.setEmail(s);
+                    break;
+                case SECRETBALLOT:
                     current.setEmail(s);
                     break;
                 case NEWS:
@@ -79,6 +89,9 @@ public class PageHandler extends DefaultHandler {
     public void endElement(String Uri, String localName, String qName) {
         if ("page".equals(localName)) {
             pageList.add(current);
+        }
+        if("autorize".equals(localName)){
+            pageList.add(authorize);
         }
     }
 

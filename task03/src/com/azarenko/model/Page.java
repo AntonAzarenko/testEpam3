@@ -3,13 +3,30 @@ package com.azarenko.model;
 public abstract class Page {
     private String title;
     private String type;
-    private boolean authorize;
     private boolean news;
     private String email;
     private boolean archives;
     private boolean paid;
     private boolean vote;
     private boolean voteauthorize;
+    private String login;
+    private String password;
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
     public boolean isArchives() {
         return archives;
@@ -49,14 +66,6 @@ public abstract class Page {
 
     public void setPaid(boolean paid) {
         this.paid = paid;
-    }
-
-    public boolean isAuthorize() {
-        return authorize;
-    }
-
-    public void setAuthorize(boolean authorize) {
-        this.authorize = authorize;
     }
 
     public boolean isNews() {

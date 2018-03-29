@@ -1,25 +1,15 @@
 package com.azarenko.model;
 
 public class PortalPage extends Page {
-    private boolean authorize;
     private String email;
     private boolean vote;
-    private boolean voteauthorize;
+    private boolean secretballot;
 
     public PortalPage(String title) {
         super(title);
     }
 
     public PortalPage() {
-    }
-
-    public boolean isAuthorize() {
-
-        return authorize;
-    }
-
-    public void setAuthorize(boolean authorize) {
-        this.authorize = authorize;
     }
 
     public String getEmail() {
@@ -38,11 +28,11 @@ public class PortalPage extends Page {
         this.vote = vote;
     }
 
-    public boolean isVoteauthorize() {
-        return voteauthorize;
+    public boolean isSecretballot() {
+        return secretballot;
     }
 
-    public void setVoteauthorize(boolean voteauthorize) {
-        this.voteauthorize = voteauthorize;
+    public void setSecretballot(boolean secretballot) {
+        this.secretballot = secretballot;
     }
 }

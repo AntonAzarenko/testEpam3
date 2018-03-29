@@ -13,7 +13,10 @@ public class Main {
         Site site = new Site();
         site.setPageList(siteSaxBuilder.getPageList());
         List<Page> pageList = site.getPageList();
-        System.out.println("Email "+pageList.get(1).isAuthorize());
+        pageList.forEach(m ->System.out.println(m));
+
+
+
 
     }
 

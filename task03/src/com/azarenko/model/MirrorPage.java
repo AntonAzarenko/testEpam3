@@ -1,20 +1,11 @@
 package com.azarenko.model;
 
 public class MirrorPage extends Page {
-    private boolean authorize;
     private String email;
     private boolean archives;
     private boolean paid;
 
-    public boolean isAuthorize() {
-        return authorize;
-    }
-
     public MirrorPage() {
-    }
-
-    public void setAuthorize(boolean authorize) {
-        this.authorize = authorize;
     }
 
     public String getEmail() {

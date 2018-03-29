@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="www.azarenko.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="site" type="azar:siteType" xmlns:azar="www.azarenko.com"/>
-  <xs:complexType name="pageType">
+  <xs:complexType name="pageType" mixed="true">
     <xs:sequence>
       <xs:element name="title">
         <xs:simpleType>
           <xs:restriction base="xs:string">
+            <xs:enumeration value="googleadvertisinds"/>
+            <xs:enumeration value="news"/>
+            <xs:enumeration value="tut.by"/>
+            <xs:enumeration value="mirrors"/>
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
@@ -19,17 +23,10 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element name="autorize">
-        <xs:simpleType>
-          <xs:restriction base="xs:string">
-            <xs:enumeration value="false"/>
-            <xs:enumeration value="true"/>
-          </xs:restriction>
-        </xs:simpleType>
-      </xs:element>
-      <xs:element type="xs:boolean" name="news" minOccurs="0"/>
-      <xs:element type="xs:boolean" name="vote" minOccurs="0"/>
-      <xs:element type="xs:boolean" name="voteautorize" minOccurs="0"/>
+      <xs:element type="xs:string" name="news" minOccurs="0"/>
+      <xs:element type="azar:autorizeType" name="autorize" minOccurs="0" xmlns:azar="www.azarenko.com"/>
+      <xs:element type="xs:string" name="vote" minOccurs="0"/>
+      <xs:element type="xs:string" name="secretballot" minOccurs="0"/>
       <xs:element name="email" minOccurs="0">
         <xs:simpleType>
           <xs:restriction base="xs:string">
@@ -42,11 +39,17 @@
       <xs:element type="xs:boolean" name="archives" minOccurs="0"/>
       <xs:element type="xs:boolean" name="paid" minOccurs="0"/>
     </xs:sequence>
-    <xs:attribute type="xs:integer" name="id" use="optional"/>
+    <xs:attribute type="xs:string" name="id" use="optional"/>
   </xs:complexType>
   <xs:complexType name="siteType">
     <xs:sequence>
       <xs:element type="azar:pageType" name="page" maxOccurs="unbounded" minOccurs="0" xmlns:azar="www.azarenko.com"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="autorizeType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="login"/>
+      <xs:element type="xs:string" name="password"/>
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

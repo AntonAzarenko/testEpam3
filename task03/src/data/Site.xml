@@ -4,27 +4,27 @@
     <page id="1">
         <title>googleadvertisinds</title>
         <type>advetisindpage</type>
-        <autorize>false</autorize>
     </page>
     <page id="2">
         <title>news</title>
         <type>newspage</type>
-        <autorize>false</autorize>
         <news>true</news>
         <email>news@mail.by</email>
     </page>
     <page id="3">
         <title>tut.by</title>
         <type>portalpage</type>
-        <autorize>true</autorize>
+            <autorize>
+                <login>Anton</login>
+                <password>123</password>
+            </autorize>
         <vote>true</vote>
-        <voteautorize>false</voteautorize>
+        <secretballot>false</secretballot>>
         <email>tut@tut.by</email>
     </page>
     <page id="4">
         <title>mirrors</title>
         <type>mirrorpage</type>
-        <autorize>false</autorize>
         <email>mirirs@gmail.com</email>
         <archives>true</archives>
         <paid>false</paid>

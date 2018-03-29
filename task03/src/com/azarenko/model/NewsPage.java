@@ -1,7 +1,6 @@
 package com.azarenko.model;
 
 public class NewsPage extends Page {
-    private boolean authorize;
     private boolean news;
     private String email;
 
@@ -9,15 +8,9 @@ public class NewsPage extends Page {
         super(title);
     }
 
-    public boolean isAuthorize() {
-        return authorize;
-    }
+
 
     public NewsPage() {
-    }
-
-    public void setAuthorize(boolean authorize) {
-        this.authorize = authorize;
     }
 
     public boolean isNews() {
